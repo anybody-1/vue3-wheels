@@ -1,15 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <Lv />
+  <nav>导航栏</nav>
+  <router-link to="/">first</router-link>|
+  <router-link to="xxx">second</router-link>
+  <hr />
+
+  <router-view />
 </template>
 
 <script>
-import Lv from "./components/Lv.vue";
-
 export default {
   name: "App",
-  components: {
-    Lv,
-  },
 };
 </script>

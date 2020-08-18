@@ -1,5 +1,5 @@
 <template>
-  <div class="topnav">
+  <div class="topnav" @click="toggleMenu">
     <div class="logo">LOGO</div>
     <ul class="menu">
       <li>菜单1</li>
@@ -8,8 +8,18 @@
   </div>
 </template>
 
-<script>
-export default {};
+<script lang='ts'>
+import { inject, Ref } from "vue";
+export default {
+  name: "Topnav",
+  setup(props) {
+    const asideVisible = inject<Ref<Boolean>>("asideVisible");
+    const toggleMenu = () => {
+      asideVisible.value = !asideVisible.value;
+    };
+    return { toggleMenu };
+  },
+};
 </script>
 
 <style lang="scss" scoped>

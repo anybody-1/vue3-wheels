@@ -2,6 +2,7 @@
   <div>
     <Topnav />
     <div class="content">
+      主内容
       <aside v-if="asideVisible">
         <h2>组件列表</h2>
         <ol>
